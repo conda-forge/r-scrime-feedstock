@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -35,13 +36,14 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=scrime
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Tools for the analysis of high-dimensional data developed/implemented at the group
     "Statistical Complexity Reduction In Molecular Epidemiology" (SCRIME). Main focus
     is on SNP data. But most of the functions can also be applied to other types of
     categorical data.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
