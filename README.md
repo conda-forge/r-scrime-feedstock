@@ -1,11 +1,11 @@
-About r-scrime
-==============
+About r-scrime-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-scrime-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=scrime
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-scrime-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tools for the analysis of high-dimensional data developed/implemented at the group "Statistical Complexity Reduction In Molecular Epidemiology" (SCRIME). Main focus is on SNP data. But most of the functions can also be applied to other types of categorical data.
 
